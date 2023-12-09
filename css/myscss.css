@@ -1160,9 +1160,19 @@ section {
 
 /* Login */
 
+/* Contoh pengaturan untuk tombol Login dan Sign Up */
 .login-btn,
 .signup-btn {
-  font-size: 14px; /* Sesuaikan ukuran teks sesuai keinginan Anda */
-  display: inline-block; /* Mengatur tampilan tombol secara inline */
-  margin-right: 10px; /* Jarak antara tombol Login dan Sign Up */
+  font-size: 18px; /* Sesuaikan ukuran teks sesuai kebutuhan */
+  /* Tambahan gaya lainnya */
 }
+
+/* Media query untuk layar yang lebih kecil */
+@media screen and (max-width: 480px) {
+  .login-btn,
+  .signup-btn {
+    font-size: 14px; /* Ubah ukuran teks untuk layar yang lebih kecil */
+    /* Sesuaikan gaya lainnya jika diperlukan */
+  }
+}
+
