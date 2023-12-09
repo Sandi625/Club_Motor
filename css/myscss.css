@@ -1158,6 +1158,11 @@ section {
 
 
 
+/* Login */
 
-
-
+.login-btn,
+.signup-btn {
+  font-size: 14px; /* Sesuaikan ukuran teks sesuai keinginan Anda */
+  display: inline-block; /* Mengatur tampilan tombol secara inline */
+  margin-right: 10px; /* Jarak antara tombol Login dan Sign Up */
+}
