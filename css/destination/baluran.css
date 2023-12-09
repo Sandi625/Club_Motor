@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #219150;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image-container {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    flex: 1;
+    padding-left: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+/* Tambahkan media queries lainnya sesuai kebutuhan responsif lainnya */
+
+/* CSS di dalam file ../../css/destination/ijen.css */
+/* Gaya tombol "Back" */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Warna hijau */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Animasi perubahan warna saat hover */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Warna hijau sedikit lebih gelap saat hover */
+}

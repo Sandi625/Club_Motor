@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Gallery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/opentrip/option.css'>
+    <style>
+        /* Style the gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        /* Style the image cards */
+        .image-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the images */
+        .image-card img {
+            width: 100%;
+            height: 200px; /* Menentukan tinggi tetap */
+            object-fit: cover; /* Mengatur gambar agar memenuhi kotak */
+            object-position: center; /* Mengatur posisi gambar di dalam kotak */
+            display: block;
+            cursor: pointer; /* Mengubah kursor menjadi tanda klik */
+        }
+
+        /* Style the description */
+        .description {
+            padding: 10px;
+            background-color: #f0f0f0;
+            font-size: 14px;
+        }
+
+        /* Style the date */
+        .date {
+            font-style: italic;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Style the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Style the modal content */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* Close button for the modal */
+        .close {
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        /* Hide the default checkbox */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Show the modal when checkbox is checked */
+        input[type="checkbox"]:checked + .modal {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="../index.html" onclick="history.go(-1);">Back</a>
+        </div>
+        <h1>Gallery</h1>
+    </div>
+
+    <div class="info-container">
+    </div>
+    <section class="gallery" id="gallery">
+        <div class="image-card">
+            <img src="../motor/1 (2).jpg" alt="Kegiatan Amal">
+            <div class="description">
+                <p>Kopdar kegiatan amal bersama anak yatim dan panti asuhan.</p>
+                <p class="date">10 Oktober 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (4).jpg" alt="Kompetisi Drag Bike">
+            <div class="description">
+                <p>Kompetisi drag bike antar klub motor se-Jabodetabek.</p>
+                <p class="date">15 November 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (5).jpg" alt="Touring Destinasi Wisata">
+            <div class="description">
+                <p>Touring ke destinasi wisata alam dengan peserta lebih dari 50 motor.</p>
+                <p class="date">5 Januari 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (6).jpg" alt="Perayaan Anniversary Club">
+            <div class="description">
+                <p>Perayaan ulang tahun klub motor ke-5 dengan berbagai acara menarik.</p>
+                <p class="date">20 Februari 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (7).jpg" alt="Workshop Perawatan Motor">
+            <div class="description">
+                <p>Workshop mengenai perawatan motor bagi anggota klub.</p>
+                <p class="date">8 Maret 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (8).jpg" alt="Touring Pantai Bersama Keluarga">
+            <div class="description">
+                <p>Touring santai ke pantai bersama keluarga klub motor.</p>
+                <p class="date">12 April 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (9).jpg" alt="Kompetisi Modifikasi Motor">
+            <div class="description">
+                <p>Kompetisi modifikasi motor dengan tema kreativitas tanpa batas.</p>
+                <p class="date">30 Mei 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (10).jpg" alt="Off-road Adventure">
+            <div class="description">
+                <p>Adventure off-road ke daerah pegunungan dengan medan menantang.</p>
+                <p class="date">18 Juni 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (11).jpg" alt="Gathering Komunitas Motor">
+            <div class="description">
+                <p>Gathering antar komunitas motor untuk bertukar pengalaman.</p>
+                <p class="date">5 Juli 2023</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="../motor/1 (12).jpg" alt="Training Safety Riding">
+            <div class="description">
+                <p>Training safety riding bagi anggota klub untuk keselamatan di jalan.</p>
+                <p class="date">20 Agustus 2023</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Modal for displaying the clicked image -->
+    <input type="checkbox" id="modal-toggle">
+    <div class="modal">
+        <label class="close" for="modal-toggle">&times;</label>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="Modal Image">
+        </div>
+    </div>
+    
+    <script src='js/privatetrip.js'></script>
+</body>
+</html>

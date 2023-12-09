@@ -1,0 +1,86 @@
+/* Mengatur gaya dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur tampilan header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mengatur gaya logo */
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+/* Mengatur tampilan navbar */
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Warna yang berbeda saat hover */
+}
+
+/* Mengatur tampilan ikon-ikon */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #ffcc00; /* Warna yang berbeda saat hover */
+}
+
+/* Mengatur tampilan ikon menu responsif */
+#menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mengatur tampilan ikon keranjang belanja */
+.fa-shopping-cart {
+    position: relative;
+}
+
+/* Mengatur tampilan ikon pencarian */
+#search-btn {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Mengatur tampilan ikon hiking */
+.fa-hiking {
+    font-size: 32px;
+    margin-right: 10px;
+}

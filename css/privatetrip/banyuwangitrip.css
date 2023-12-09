@@ -1,0 +1,437 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    text-align: center;
+}
+
+.info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: left;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+ul, table, .fasilitas, .non-fasilitas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+.fasilitas, .non-fasilitas {
+    margin-top: 10px;
+}
+
+.fasilitas li, .non-fasilitas li {
+    font-size: 1.2rem;
+    color: #10221b;
+    margin-bottom: 10px;
+}
+
+.fasilitas li::before, .non-fasilitas li::before {
+    content: '\2022'; /* Unicode untuk bullet point */
+    color: #10221b;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 5px;
+}
+/* Gaya Header */
+.header {
+    background-color: #219150;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gaya Tombol Kembali */
+.back-button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #45a049;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: #10221b;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Mengisi tinggi viewport untuk pusatkan vertikal */
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.whatsapp-button {
+    background-color: #45a049; /* Warna hijau */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px; /* Border radius */
+    padding: 10px 24px;
+}
+
+.whatsapp-button:hover {
+    background-color: #45a049; /* Warna hijau yang sedikit lebih gelap saat tombol dihover */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  .document-center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*We do this because the carousel needs to be 100% width 
+  in order for the aspect ratio trick to work*/
+  .carousel-container {
+    max-width: 980px;
+    width: 95%;
+  }
+  
+  /*This is the actual carousel. Overflow hidden acts as a mask*/
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    /*Width of image is 980px. Height is 570px.*/
+    padding-top: calc(570 / 980 * 100%);
+    overflow: hidden;
+  }
+  
+  .carousel-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .left-arrow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 147px;
+    cursor: pointer;
+  }
+  
+  .left-arrow:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  }
+  
+  .left-arrow:hover .chevron,
+  .right-arrow:hover .chevron {
+    border-color: #e6e6e6;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 147px;
+    cursor: pointer;
+  }
+  
+  .right-arrow:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  }
+  
+  .chevron {
+    width: 25px;
+    height: 25px;
+    border: solid rgba(255, 255, 255, 0.5);
+    border-width: 10px 10px 0 0;
+  }
+  
+  .chevron.right {
+    transform: rotate(45deg);
+  }
+  
+  .chevron.left {
+    transform: rotate(-135deg);
+  }
+  
+  .circle-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+  }
+  
+  .circle {
+    border: 1px solid white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .circle-fill {
+    background-color: white;
+  }
+  
+  .text-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px black;
+    text-align: center;
+  }
+  
+  .text-container p:nth-child(1) {
+    margin: 10px 100px;
+    font-size: 1.5em;
+  }
+  
+  .text-container p:nth-child(2) {
+    margin: 10px 100px 20px 100px;
+  }
+  
+  .carousel-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+}
+h2 {
+    border-radius: 10px; /* Border radius */
+    background-color: #10221b; /* Warna hijau */
+    color: white; /* Warna teks putih */
+    padding: 10px; /* Padding */
+    text-align: center; /* Posisi teks di tengah */
+}
+
+h2 span {
+    color: yellow; /* Warna teks kuning pada elemen span */
+}
+
+
+  
+  /* Animations */
+  @keyframes toRight {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes toLeft {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  
+  @keyframes comeRight {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+  @keyframes comeLeft {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+
+  .header {
+    background-color: #8bc08f;
+    padding: 20px;
+    text-align: center;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: white; /* Ubah warna teks menjadi putih */
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+    color: #4CAF50; /* Warna hijau muda */
+}
+
+
+
+
+/* Media queries untuk responsif */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS untuk tata letak tabel pada tampilan ponsel */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+}
+
+/* CSS umum untuk swiper */
+.info-container {
+    /* Atur lebar dan tinggi container swiper sesuai kebutuhan */
+}
+
+.swiper-slide {
+    /* Atur lebar dan tinggi slide sesuai kebutuhan */
+}
+
+/* Media queries untuk responsif */
+@media (max-width: 767px) {
+    .swiper-slide {
+        width: 100%; /* Sesuaikan lebar slide dengan lebar layar pada layar kecil */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .swiper-slide {
+        width: 50%; /* Atur dua slide dalam satu baris pada lebar layar sedang */
+    }
+}
+
+@media (min-width: 1024px) {
+    .swiper-slide {
+        width: 33.3333%; /* Atur tiga slide dalam satu baris pada lebar layar besar */
+    }
+}

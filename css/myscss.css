@@ -1,0 +1,1163 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+
+
+.price del {
+  text-decoration: line-through;
+}
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background: #10221b;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid black;
+  color: #10221b;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+}
+.btn:hover {
+  background: #10221b;
+  color: #fff;
+}
+
+/* Define a keyframe animation for button1 blinking */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/* Apply the animation to .btn1 element */
+.btn1 {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid black;
+  color: #219150;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  position: relative;
+  overflow: hidden;
+  /* Add the blink animation */
+  animation: blink 1s infinite; /* Make it blink infinitely */
+}
+.btn1:hover {
+  background: #10221b;
+  color: #fff;
+}
+
+/* Disable the animation on hover for .btn1 */
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  color: #10221b;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.header.active {
+  background: #ffffff00;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  height: 60px; /* Sesuaikan tinggi header sesuai kebutuhan */
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff56; /* Atur warna latar belakang sesuai kebutuhan */
+  padding: 5px 5px; /* Atur padding sesuai kebutuhan */
+}
+.header .logo {
+  font-size: 1.5rem;
+  background-color: #10221b00;
+  color: #10221b;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  padding: 1px; /* Sesuaikan nilai padding sesuai kebutuhan */
+}
+
+.header .logo img {
+  width: 80px; /* Sesuaikan ukuran gambar logo sesuai kebutuhan */
+  height: auto;
+ margin-top: -20%;
+  background-color: #ffffff00;
+  margin-right: 10px; /* Beri sedikit ruang di sebelah kanan gambar */
+  color: #219150;
+}
+
+.header .logo span {
+  font-size: 2.5rem;
+  color: #10221b;
+  font-weight: bolder;
+}
+
+
+
+
+.navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: #10221b;
+}
+.navbar a:hover {
+  color: #219150;
+}
+.navbar #nav-close {
+  font-size: 5rem;
+  cursor: pointer;
+  color: #10221b;
+  display: none;
+}
+
+.icons a,
+.icons div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: #10221b;
+}
+.icons a:hover,
+.icons div:hover {
+  color: #219150;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  transform: translateY(-110%);
+}
+.search-form.active {
+  transform: translateY(0%);
+}
+.search-form #close-search {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 6rem;
+}
+.search-form #close-search:hover {
+  color: #219150;
+}
+.search-form form {
+  width: 70rem;
+  margin: 0 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid #fff;
+  display: flex;
+  align-items: center;
+}
+.search-form form input {
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  padding: 2rem;
+}
+.search-form form input::placeholder {
+  color: #aaa;
+}
+.search-form form label {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #fff;
+}
+.search-form form label:hover {
+  color: #219150;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 3rem;
+  color: #10221b;
+}
+
+.category .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: 1.5rem;
+}
+.category .box-container .box {
+  text-align: center;
+  padding: 1rem;
+}
+.category .box-container .box img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.category .box-container .box h3 {
+  font-size: 2rem;
+  color: #219150;
+}
+.category .box-container .box p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.about {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.about .images {
+  flex: 1 1 auto;
+  max-width: 35%; /* Lebar gambar */
+  padding-bottom: 5rem;
+}
+
+.about .images img {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.about .content {
+  flex: 1 1 auto;
+  max-width: 60%; /* Lebar konten */
+}
+
+
+.content {
+  flex: 1 1 42rem;
+}
+.content h3 {
+  font-size: 3rem;
+  color: #10221b;
+}
+.content p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.shop .slide {
+  border: 0.2rem solid black;
+}
+.shop .slide:hover .image .icons {
+  transform: translateY(0);
+}
+.shop .slide .image {
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+  width: 100%;
+}
+.shop .slide .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.shop .slide .image .icons {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+  transform: translateY(7rem);
+}
+.shop .slide .image .icons a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  background: #10221b;
+  color: #fff;
+  margin: 0 0.2rem;
+}
+.shop .slide .image .icons a:hover {
+  background: #219150;
+}
+.shop .slide .content {
+  padding: 1rem 0;
+  text-align: center;
+}
+.shop .slide .content h3 {
+  font-size: 1rem 0;
+  color: #10221b;
+}
+.shop .slide .content .price {
+  padding: 1rem 0;
+  padding-top: 0.5rem;
+  font-size: 2.5rem;
+  color: #219150;
+}
+.shop .slide .content .stars i {
+  font-size: 1.7rem;
+  color: #10221b;
+}
+
+.packages {
+  background: #eee;
+}
+.packages .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.packages .box-container .box {
+  text-align: center;
+  background: #fff;
+  border: 0.2rem solid black;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+}
+.packages .box-container .box:hover {
+  background: #10221b;
+}
+.packages .box-container .box:hover .content > * {
+  color: #fff;
+}
+.packages .box-container .box:hover .btn {
+  border-color: #fff;
+}
+.packages .box-container .box:hover .btn:hover {
+  background: #fff;
+  color: #10221b;
+}
+.packages .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  padding: 2rem;
+  padding-bottom: 0;
+  border-radius: 0.5rem;
+}
+.packages .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.packages .box-container .content {
+  padding: 2rem;
+}
+.packages .box-container .content h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+.packages .box-container .content p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+.packages .box-container .content .price {
+  font-size: 2rem;
+  color: #219150;
+}
+
+.services {
+  background: #eee;
+}
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 1.5rem;
+}
+.services .box-container .box {
+  text-align: center;
+  padding: 2rem;
+  border: 0.2rem solid black;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+.services .box-container .box:hover {
+  background: #10221b;
+}
+.services .box-container .box:hover img {
+  filter: invert(0);
+}
+.services .box-container .box:hover p {
+  color: #fff;
+}
+.services .box-container .box:hover .btn {
+  border-color: #fff;
+  color: #fff;
+}
+.services .box-container .box:hover .btn:hover {
+  background: #fff;
+  color: #10221b;
+}
+.services .box-container .box img {
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+.services .box-container .box h3 {
+  font-size: 2rem;
+  color: #219150;
+}
+.services .box-container .box p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.reviews .slide {
+  position: relative;
+  /* Tambahkan tombol navigasi Swiper di sini */
+}
+.reviews .slide::before, .reviews .slide::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 5rem; /* Tinggi panah yang lebih besar */
+  width: 5rem; /* Lebar panah yang lebih besar */
+  background-color: rgba(0, 128, 0, 0.132); /* Warna latar belakang hijau */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem; /* Ukuran font yang lebih besar */
+  color: #10221b; /* Warna panah */
+}
+.reviews .slide::before {
+  left: -7rem; /* Panah kiri */
+  content: "→";
+}
+.reviews .slide::after {
+  right: -4rem; /* Panah kanan */
+  content: "→";
+}
+.reviews .slide .swiper-button-next,
+.reviews .slide .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5rem;
+  height: 5rem;
+  background-color: #219150;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #10221b;
+}
+.reviews .slide .swiper-button-next {
+  right: -6rem;
+}
+.reviews .slide .swiper-button-prev {
+  left: -6rem;
+}
+.reviews .slide .text {
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  background: #eee;
+  border-radius: 0.5rem;
+  color: #10221b;
+  line-height: 2;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 3rem;
+}
+.reviews .slide .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.reviews .slide .user img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+.reviews .slide .user h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+.reviews .slide .user span {
+  color: #219150;
+  font-size: 1.5rem;
+}
+
+.blogs .slide {
+  text-align: center;
+  padding: 2rem;
+}
+.blogs .slide img {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.blogs .slide .icons {
+  background: #10221b;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: relative;
+  top: -2rem;
+  display: inline-block;
+}
+.blogs .slide .icons a {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0 1rem;
+}
+.blogs .slide .icons i {
+  padding-right: 0.5rem;
+  color: #219150;
+}
+.blogs h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+.blogs p {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  line-height: 2;
+  color: #10221b;
+}
+.newsletter .content form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 5rem;
+  border: 0.2rem solid black;
+  padding: 1.3rem;
+}
+
+.newsletter .content form .message {
+  flex: 1;
+  background: none;
+  text-transform: none;
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 0 1.3rem;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+}
+
+.newsletter .content form .btn {
+  background: #10221b;
+  color: #fff;
+  border: none;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.newsletter .content form .btn:hover {
+  background: none;
+  color: #10221b;
+}
+
+
+
+
+.clients .slide {
+  text-align: center;
+}
+.clients .slide img {
+  height: 12rem;
+}
+
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/footer-img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2rem;
+  padding: 1.5rem 0;
+  color: #fff;
+}
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.footer .box-container .box a i {
+  color: #219150;
+  padding-right: 0.5rem;
+}
+.footer .box-container .box a:hover {
+  color: #219150;
+}
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+.footer .credit {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: #fff;
+}
+.footer .credit span {
+  color: #219150;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+    scroll-padding-top: 7rem;
+  }
+  .home .box {
+    padding: 2rem;
+    justify-content: center;
+    background-position: right !important;
+  }
+  .home .box.second {
+    justify-content: center;
+    background-position: left !important;
+  }
+  .home .box .content {
+    text-align: center;
+  }
+  .home .box .content span {
+    font-size: 3rem;
+  }
+  .home .box .content h3 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    background: #fff;
+    z-index: 10000;
+    width: 35rem;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .navbar.active {
+    left: 0;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+  .header .navbar a {
+    margin: 1rem 0;
+    font-size: 3rem;
+  }
+  .header .navbar #nav-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: inline;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+}
+.home {
+  padding: 0;
+}
+.home .box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: flex-end;
+  padding: 2rem 9%;
+}
+.home .box.second {
+  justify-content: flex-start;
+}
+.home .box .content {
+  width: 50rem;
+}
+.home .box .content span {
+  font-size: 4rem;
+  color: #ffffff;
+}
+.home .box .content h3 {
+  font-size: 6rem;
+  color: #219150;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+.home .box .content p {
+  line-height: 2;
+  color: #10221b;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+  .images {
+    padding: 0;
+    text-align: center;
+  }
+  .content {
+    text-align: center;
+  }
+}
+/* Add a white transparent border to <p> elements */
+.home-slider .swiper-slide .content p {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.163);
+  backdrop-filter: blur(10px);
+  text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.308); /* White transparent border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.362);
+  border-right: 1px solid rgba(255, 255, 255, 0.305);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transform: translateX(-80px);
+  transition: transform 1s ease 0.3s;
+}
+
+/* Define keyframes for the animations */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Apply the animations to <span> and <h3> */
+.home-slider .swiper-slide .content span {
+  animation: slideInDown 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+.home-slider .swiper-slide .content h3 {
+  animation: slideInLeft 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/* Add transitions for smoother effect */
+.home-slider .swiper-slide .content span,
+.home-slider .swiper-slide .content h3 {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Define keyframes for the animation */
+@keyframes slideInLeftSlow {
+  from {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Apply the animation to <p> */
+.home-slider .swiper-slide .content p {
+  animation: slideInLeftSlow 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Slower and smoother animation */
+}
+
+/* Add a transition for smoother effect on transform */
+.home-slider .swiper-slide .content p {
+  transition: transform 0.5s ease;
+}/*# sourceMappingURL=myscss.css.map */
+.whatsapp-logo {
+  background-color: #25D366; /* Warna hijau WhatsApp */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 9999; /* Nilai z-index yang tinggi untuk memastikan tampil di depan elemen lain */
+}
+
+.whatsapp-logo i {
+  color: white;
+  font-size: 30px;
+}
+
+
+
+
+/* CSS Email */
+/* tailwind */
+/* Gaya untuk kolom dan teks */
+.form-label {
+  font-size: 2rem; /* Ukuran font untuk label */
+  color: #4a5568; /* Warna font untuk label */
+}
+
+.form-control {
+  font-size: 2rem; /* Ukuran font untuk input dan textarea */
+  padding: 2rem 1rem; /* Padding untuk input dan textarea */
+  border-radius: 0.5rem; /* Sudut melengkung untuk input dan textarea */
+  border: 1px solid #000000; /* Warna border untuk input dan textarea */
+  width: 100%; /* Lebar 100% untuk input dan textarea */
+  margin-bottom: 1.5rem; /* Margin bawah */
+}
+
+/* Gaya untuk judul dan teks paragraf */
+.h1-style {
+  font-size: 1.875rem; /* Ukuran font untuk judul */
+  font-weight: 600; /* Ketebalan font untuk judul */
+  color: #2d3748; /* Warna font untuk judul */
+  margin-bottom: 1.5rem; /* Margin bawah */
+}
+
+.p-style {
+  font-size: 1rem; /* Ukuran font untuk teks paragraf */
+  line-height: 1.5; /* Tinggi baris untuk teks paragraf */
+  color: #4a5568; /* Warna font untuk teks paragraf */
+  margin-bottom: 2rem; /* Margin bawah */
+}
+/* CSS untuk tombol submit kustom */
+.custom-submit-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem 5rem;
+  cursor: pointer;
+  font-size: 3rem; /* Increased font size to 2rem */
+  border-radius: 0.25rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+
+.custom-submit-button:hover {
+  background-color: #333;
+}
+
+
+/* Visi Misi */
+.container {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.visi,
+.misi {
+  width: 48%;
+  font-size: 18px;
+  margin-right: 2%;
+  transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi warna teks */
+}
+
+.misi:last-child {
+  margin-right: 0;
+}
+
+.visi:hover,
+.misi:hover,
+.visi:focus,
+.misi:focus {
+  background-color: #10221b;
+  color: white; /* Mengubah warna teks menjadi putih */
+}
+
+.visi h2,
+.misi h2 {
+  font-size: 24px;
+}
+
+
+
+
+/* profile */
+.profile {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.images-profile img {
+  max-width: 100%;
+  height: auto;
+  max-width: 300px; /* Sesuaikan sesuai kebutuhan */
+}
+
+.images-profile {
+  margin-right: 30px; /* Jarak antara gambar dan card */
+}
+
+/* styles.css */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Jarak antara card */
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+}
+
+.card .card-content h3 {
+  margin-top: 0;
+  transition: color 0.3s; /* Efek transisi warna teks */
+}
+
+.card .card-content p {
+  margin-bottom: 0;
+  color: #333; /* Warna teks card */
+}
+
+.card:hover {
+  background-color: #10221b;
+}
+
+.card:hover h3,
+.card:hover p {
+  color: white; /* Warna teks diubah menjadi putih saat dihover */
+}
+
+/* Untuk layar berukuran kecil (misalnya, perangkat Android kecil) */
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column; /* Menyusun item secara vertikal saat layar kecil */
+  }
+
+  .images-profile {
+    margin-right: 0; /* Hapus margin pada gambar untuk ruang yang lebih baik */
+    margin-bottom: 20px; /* Tambahkan jarak antara gambar dan card */
+  }
+
+  .images-profile img {
+    max-width: 100%; /* Lebar gambar mengisi lebar container */
+    height: auto;
+  }
+
+  .card {
+    width: 100%; /* Mengisi lebar container */
+  }
+}
+
+
+
+
+
+
+
+/* .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile h2 {
+  font-size: 40px; 
+}
+
+.profile p {
+  font-size: 20px;
+}
+
+.btn-profile {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid black;
+  color: #10221b;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  text-decoration: none; 
+  border-radius: 0.5rem; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.btn-profile:hover {
+  background: #10221b;
+  color: #fff;
+}
+
+
+
+.content-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imagesprofile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imagesprofile img {
+  width: 100%; 
+  max-width: 800px; 
+  border: 8px solid #076019;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+
+
+.description-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+
+.card-kelebihan,
+.card-kekurangan {
+  width: calc(50% - 20px); 
+  max-width: 400px; 
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.card-kelebihan h3,
+.card-kekurangan h3 {
+  font-size: 24px; 
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card-kelebihan p,
+.card-kekurangan p {
+  font-size: 16px; 
+  color: #666;
+  line-height: 1.6;
+}
+
+
+@media screen and (max-width: 600px) {
+  .card-kelebihan,
+  .card-kekurangan {
+    width: calc(100% - 20px); 
+  }
+}
+ */
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Information</title>
+    <link rel="stylesheet" href="cssbanyuwangi.css/opsi1.css">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <!-- ... -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-1234567890abcdefghijklmnopqrstuvwxyzABCDEF=" crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+
+        <!-- ... -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    </head>
+
+<body>
+
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div class="back-button">
+                <a href="option.html" onclick="history.go(-1);">Back</a> <br>
+            </div>
+            <h1>Request Trip</h1>
+        </div>
+        <div id="carousel-1" class="carousel">
+            <div class="carousel-screen">
+                <img src="../foto/1ijen.JPG" alt="Slide 1">
+            </div>
+            <div class="carousel-screen">
+                <img src="../foto/50.jpg" alt="Slide 2">
+            </div>
+            <div class="carousel-screen">
+                <img src="../foto/51.jpg" alt="Slide 3">
+            </div>
+            <!-- ...Tambahkan lebih banyak carousel-screen sesuai dengan kebutuhan -->
+            <div class="circle-container">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <!-- ...Tambahkan lebih banyak circle sesuai dengan jumlah carousel-screen -->
+            </div>
+            <div class="left-arrow" style="color: white;">Turn Left</div>
+            <div class="right-arrow" style="color: white;">Turn Right</div>
+
+        </div>
+
+        <div class="center">
+            <button class="whatsapp-button" onclick="redirectToWhatsApp()">Booking Now</button>
+        </div>
+
+
+
+        <h2>All Destinations: <span>Kawah Ijen, Djawatan, Red Island, Baluran, and Others</span></h2> <br> <br> <br>
+
+        <h2>Travel Itinerary for Baluran</h2>
+        
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>13:00 </td>
+                <td>Pickup from hotel, travel to Baluran</td>
+            </tr>
+            <tr>
+                <td>14:30</td>
+                <td>Arrive at Baluran and explore</td>
+            </tr>
+            <tr>
+                <td>17:00</td>
+                <td>Head to the restaurant</td>
+            </tr>
+            <tr>
+                <td>18:00 </td>
+                <td>Dinner</td>
+            </tr>
+            <tr>
+                <td>19:00 - End</td>
+                <td>Return to Hotel</td>
+            </tr>
+        </table>
+        
+        <h2>Travel Itinerary for Kawah Ijen</h2>
+        
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>00:00 </td>
+                <td>Pickup from hotel, travel to Paltuding</td>
+            </tr>
+            <tr>
+                <td>01:30</td>
+                <td>Arrive at Paltuding, briefing and 30-minute climbing sharing</td>
+            </tr>
+            <tr>
+                <td>02:00</td>
+                <td>Climb to Kawah Ijen</td>
+            </tr>
+            <tr>
+                <td>03:30 </td>
+                <td>Explore blue fire, sunrise, and Kawah Ijen</td>
+            </tr>
+            <tr>
+                <td>08:00</td>
+                <td>Descend to Paltuding</td>
+            </tr>
+            <tr>
+                <td>08:30</td>
+                <td>Breakfast</td>
+            </tr>
+            <tr>
+                <td>09:00 </td>
+                <td>Explore Air Terjun Jagir</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td>Travel to Hotel</td>
+            </tr>
+            <tr>
+                <td>11:00 – End</td>
+                <td>Hotel. Trip Ends</td>
+            </tr>
+        </table>
+        
+        <h2>Travel Itinerary for Djawatan and Red Island</h2>
+        
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>10:00 </td>
+                <td>Pickup from hotel, travel to Djawatan</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td>Arrive and explore Fairyland Forest for 2 hours</td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td>Lunch</td>
+            </tr>
+            <tr>
+                <td>14:00 </td>
+                <td>Head to Red Island</td>
+            </tr>
+            <tr>
+                <td>15:00</td>
+                <td>Enjoy at the beach while waiting for sunset at Red Island</td>
+            </tr>
+            <tr>
+                <td>17:00 – End</td>
+                <td>Trip Ends</td>
+            </tr>
+        </table>
+        
+
+        
+        
+
+        <style>
+            .custom-list {
+                border: 8px solid black;
+                margin: 0;
+                width: 100%;
+                padding: 10px;
+                text-align: left;
+            }
+        
+            .custom-list h2 {
+                text-align: center;
+            }
+        
+            .custom-list ul {
+                list-style-type: none;
+                padding: 0;
+            }
+        
+            .custom-list li {
+                margin-bottom: 10px;
+            }
+        </style>
+        
+        <!-- Kode HTML dengan daftar tanpa tabel dan menggunakan kelas CSS custom-list -->
+        <div class="custom-list">
+            <h2>Destinations</h2>
+            <ul>
+                <li>Kawah Ijen</li>
+                <li>Pantai Pulau Merah</li>
+                <li>Pantai Green Bay</li>
+                <li>Teluk Hijau</li>
+                <li>Pulau Menjangan</li>
+                <li>Pantai Bama</li>
+                <li>Taman Nasional Baluran</li>
+                <li>Pantai Plengkung</li>
+                <li>Pantai Wedi Ireng</li>
+                <li>Air Terjun Tumpak Sewu</li>
+                <li>Taman Nasional Alas Purwo</li>
+                <li>G-land</li>
+                <li>Pulau Tabuhan</li>
+                <li>Bangsring Underwater</li>
+                <li>Kawah Wurung</li>
+            </ul>
+        </div>
+        
+
+
+
+
+
+       
+        <h2>Inclusions</h2>
+        <table class="facilities">
+            <tr>
+                <td>Experienced tour guide</td>
+            </tr>
+            <tr>
+                <td>Entrance tickets to destinations</td>
+            </tr>
+            <tr>
+                <td>Air-conditioned transportation</td>
+            </tr>
+            <tr>
+                <td>Dinner</td>
+            </tr>
+            <tr>
+                <td>Mineral Water</td>
+            </tr>
+            <tr>
+                <td>Snacks</td>
+            </tr>
+            <tr>
+                <td>Merchandise</td>
+            </tr>
+        </table>
+        
+        <h2>Exclusions</h2>
+        <table class="non-facilities">
+            <tr>
+                <td>Accommodation (hotel or homestay)</td>
+            </tr>
+            <tr>
+                <td>Video and photo documentation (drone, and camera)</td>
+            </tr>
+            <tr>
+                <td>Climbing equipment (shoes, jacket, gloves, beanie)</td>
+            </tr>
+            <tr>
+                <td>Picnic equipment</td>
+            </tr>
+            <tr>
+                <td>Romantic bucket and romantic cake</td>
+            </tr>
+        </table>
+        </div>
+        
+
+
+        <script src="jsbanyuwangi.js/opsi1.js"></script>
+
+
+
+        <section class="footer" id="contact">
+
+            <div class="box-container">
+    
+             
+    
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#">my account</a>
+                    <a href="#">my order</a>
+                    <a href="#">my wishlist</a>
+                    <a href="#">ask question</a>
+                    <a href="#">terms of use</a>
+                    <a href="#">privacy policy</a>
+    
+    
+                </div>
+                <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fas fa-phone"> </i>+6281399447440</a>
+                <a href="#"><i class="fas fa-envelope"> </i>ijenodyssey@gmail.com</a>
+                <a href="#"><i class="fas fa-map"> </i> Licin, Banyuwangi - 68464</a>
+            </div>
+           
+            <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="https://www.instagram.com/ijen_odyssey/?igshid=OGQ5ZDc2ODk2ZA%3D%3D"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i>Linked In</a>
+            <a href="#"><i class="fab fa-tiktok"></i>Tik Tok</a>
+    
+            </div>
+    
+            </div>
+            <div class="credit">create by <span>Autocrat.id</span>| All reserved</div>
+            </div>
+    
+        </section>
+
+
+
+
+
+    </body>
+
+</html>
