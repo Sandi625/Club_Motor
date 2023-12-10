@@ -170,7 +170,7 @@ var swiper = new Swiper(".home-slider", {
 
 // wa
 function redirectToWhatsApp() {
-  var phoneNumber = '+6281399447440';  // Replace with your WhatsApp number
+  var phoneNumber = '';  // Replace with your WhatsApp number
   var message = 'Hello!';  // Replace with your default message
   var encodedMessage = encodeURIComponent(message);
   window.open('https://wa.me/' + phoneNumber + '?text=' + encodedMessage, '_blank');

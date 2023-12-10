@@ -279,12 +279,30 @@ section {
 .about .images img {
   width: 100%;
   max-width: 100%;
+  height: auto; /* Menjaga proporsi gambar */
   box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .about .content {
   flex: 1 1 auto;
   max-width: 60%; /* Lebar konten */
+}
+
+/* Media query untuk perangkat mobile */
+@media screen and (max-width: 768px) {
+  .about .images {
+    max-width: 100%; /* Lebar gambar saat tampilan di perangkat mobile */
+    padding-bottom: 2rem; /* Atur ruang bawah gambar */
+  }
+
+  .about .images img {
+    max-width: 100%;
+    height: auto; /* Menjaga proporsi gambar */
+  }
+
+  .about .content {
+    max-width: 100%; /* Lebar konten saat tampilan di perangkat mobile */
+  }
 }
 
 
@@ -774,7 +792,7 @@ section {
 }
 .home .box .content h3 {
   font-size: 6rem;
-  color: #219150;
+  color: #ffffff;
   padding-top: 0.5rem;
   text-transform: uppercase;
 }
