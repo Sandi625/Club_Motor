@@ -231,7 +231,7 @@ if(scrollTime) {
 // Wa
 function redirectToWhatsApp() {
     // Nomor WhatsApp bisnis dan pesan prateks
-    var phoneNumber = '+6281399447440';
+    var phoneNumber = '';
     var message = encodeURIComponent('Hallo, saya ingin pesan paket travel Option 3 Open Trip Destination: Fairyland Forest and Red Island $22 per person.');
 
     // Buka tautan ke WhatsApp dengan nomor dan pesan prateks

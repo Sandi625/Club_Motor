@@ -11,6 +11,11 @@
   text-transform: capitalize;
   transition: 0.2s linear;
 }
+/* body {
+  background-color: black;
+  color: white; 
+} */
+
 
 
 
@@ -1031,6 +1036,7 @@ section {
 .card .card-content p {
   margin-bottom: 0;
   color: #333; /* Warna teks card */
+  margin-left: 30px;
 }
 
 .card:hover {
@@ -1039,6 +1045,7 @@ section {
 
 .card:hover h3,
 .card:hover p {
+  margin-left: 20px;
   color: white; /* Warna teks diubah menjadi putih saat dihover */
 }
 
